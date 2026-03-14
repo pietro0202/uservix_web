@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
 
+<meta charset="UTF-8">
 <title>Login - USERVIX</title>
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body>
+<body class="auth-body">
+
+<div class="auth-container">
+
+<h1 class="logo">USERVIX</h1>
 
 <h2>Iniciar sesión</h2>
 
-<form>
+<form class="form" method="POST" action="login.php">
 
-<input type="email" placeholder="Correo">
-<br><br>
+<div class="input-group">
+<input type="email" placeholder="Correo electrónico" required>
+</div>
 
-<input type="password" placeholder="Contraseña">
-<br><br>
+<div class="input-group">
+<input type="password" placeholder="Contraseña" required>
+</div>
 
-<button>Iniciar sesión</button>
+<button class="auth-btn">Entrar</button>
+
+<p class="link">
+¿No tienes cuenta?
+<a href="registro.html">Crear cuenta</a>
+</p>
 
 </form>
 
-</body>
+</div>
 
+</body>
 </html>
