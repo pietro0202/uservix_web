@@ -13,7 +13,7 @@ if(!isset($_SESSION['id_usuario'])){
 <head>
 <meta charset="UTF-8">
 <title>Dashboard - USERVIX</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 

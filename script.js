@@ -24,13 +24,13 @@ if(localStorage.getItem("modo") === "oscuro"){
 document.body.classList.add("dark-mode")
 
 if(logo){
-logo.src = "images/logouservixblanco.png"
+logo.src = "logouservixblanco.png"
 }
 
 }else{
 
 if(logo){
-logo.src = "images/logouservixnegro.png"
+logo.src = "logouservixnegro.png"
 }
 
 }
@@ -48,7 +48,7 @@ if(document.body.classList.contains("dark-mode")){
 localStorage.setItem("modo","oscuro")
 
 if(logo){
-logo.src = "images/logouservixblanco.png"
+logo.src = "logouservixblanco.png"
 }
 
 }else{
@@ -56,7 +56,7 @@ logo.src = "images/logouservixblanco.png"
 localStorage.setItem("modo","claro")
 
 if(logo){
-logo.src = "images/logouservixnegro.png"
+logo.src = "logouservixnegro.png"
 }
 
 }
