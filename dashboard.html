@@ -1,114 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-<title>Dashboard - USERVIX</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <title>Estudio de Diseño - UserVix</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body class="dashboard-page">
 
 <header class="header">
-
-<h1>USERVIX</h1>
-
-<nav class="menu">
-
-<a href="dashboard.html">Dashboard</a>
-<a href="#">Mis Configuraciones</a>
-<a href="#">Temas</a>
-<a href="#">Dispositivos</a>
-<a href="index.html">Cerrar sesión</a>
-
-</nav>
-
+    <div class="logo">UserVix</div>
+    <nav>
+        <button onclick="toggleDarkMode()" id="darkBtn" class="btn-outline">🌙</button>
+        <a href="index.html">Inicio</a>
+        <a href="explorar-temas.html">Launchers</a>
+        <button onclick="logout()" class="btn-primary">Cerrar Sesión</button>
+    </nav>
 </header>
 
+<main class="vix-container">
 
-<section class="dashboard">
+    <!-- SIDEBAR -->
+    <aside class="vix-sidebar">
+    <div class="profile-header">
+        <div class="avatar-glow">👤</div>
+        <h2>Usuario</h2>
+    </div>
 
-<h2>Bienvenido Usuario</h2>
+    <nav class="vix-menu">
+        <a href="solicitar-diseno.html">🎨 Solicitar Diseño</a>
+        <a href="#" onclick="toggleAccesibilidad()">♿ Accesibilidad</a>
+    </nav>
+</aside>
 
-<p>Administra tu personalización y controla las funciones de USERVIX.</p>
+    <!-- PANEL PRINCIPAL -->
+    <section class="vix-main">
 
+        <!-- HERO -->
+        <div class="vix-card-hero">
+            <h1>Panel de Transformación</h1>
+            <p>Diseña la estructura de tu dispositivo según tus necesidades reales.</p>
+        </div>
 
-<div class="cards">
+        <!-- CHAT ASISTENTE -->
+        <div class="vix-chat-card">
+            <div class="chat-header">
+                <h3>💬 Asistente UserVix</h3>
+                <span>En línea</span>
+            </div>
+            <div class="chat-body" id="chatBody">
+                 <div class="bot-msg">
+                      ¡Hola! Cuéntanos qué necesitas. Podemos crear un tema para niños, adultos mayores o productividad.
+                 </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ej: Tema para mi abuelo con botones grandes...">
+                <button class="btn-primary" onclick="enviarChat()">Enviar</button>
+            </div>
+        </div>
 
+        <!-- GRID DE TEMAS -->
+        <h2 class="section-title">Interfaces de Transformación</h2>
+        <div class="vix-grid">
 
-<div class="card">
+            <div class="vix-theme-card">
+                <div class="theme-image">
+                    <img src="interfaz-kids.png" alt="SO Infantil">
+                    <div class="overlay-badge">Modo Kids</div>
+                </div>
+                <div class="theme-info">
+                    <h3>Estructura Lúdica</h3>
+                    <p>Iconos grandes y seguridad especial para niños.</p>
+                    <div class="card-footer">
+                        <a href="" class="btn-action-sm">Descargar</a>
+                        <a href="explorar-temas.html" class="link-ver-mas">Ver más...</a>
+                    </div>
+                </div>
+            </div>
 
-<h3>Temas</h3>
+            <div class="vix-theme-card">
+                <div class="theme-image">
+                    <img src="interfaz-senior.png" alt="SO Senior">
+                    <div class="overlay-badge">Modo Senior</div>
+                </div>
+                <div class="theme-info">
+                    <h3>Accesibilidad Senior</h3>
+                    <p>Contraste alto y botones de emergencia.</p>
+                    <div class="card-footer">
+                        <a href="" class="btn-action-sm">Descargar</a>
+                        <a href="explorar-temas.html" class="link-ver-mas">Ver más...</a>
+                    </div>
+                </div>
+            </div>
 
-<p>Explora temas visuales para tu dispositivo.</p>
+            <div class="vix-theme-card">
+                <div class="theme-image">
+                    <img src="interfaz-pro.png" alt="SO Minimal">
+                    <div class="overlay-badge">Modo Pro</div>
+                </div>
+                <div class="theme-info">
+                    <h3>Enfoque Productivo</h3>
+                    <p>Cero distracciones y gestión de tiempo integrada.</p>
+                    <div class="card-footer">
+                        <a href="" class="btn-action-sm">Descargar</a>
+                        <a href="explorar-temas.html" class="link-ver-mas">Ver más...</a>
+                    </div>
+                </div>
+            </div>
 
-<button class="dash-btn">Explorar</button>
+        </div>
 
-</div>
+        <!-- NOTIFICACIÓN / ACCIÓN RÁPIDA -->
+        <div class="vix-notice">
+            <p><strong>💡 Libertad UserVix:</strong> Puedes volver a la interfaz original con un solo click.</p>
+            <button class="btn-primary" onclick="restablecerInterfaz()">Restablecer Interfaz</button>
+        </div>
+    </section>
 
+</main>
 
-<div class="card">
-
-<h3>Optimización</h3>
-
-<p>Mejora el rendimiento del sistema.</p>
-
-<button class="dash-btn">Optimizar</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>Configuraciones</h3>
-
-<p>Administra la personalización de tu sistema.</p>
-
-<button class="dash-btn">Administrar</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>Dispositivos</h3>
-
-<p>Gestiona los dispositivos conectados.</p>
-
-<button class="dash-btn">Ver dispositivos</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>Seguridad</h3>
-
-<p>Controla accesos y protege tu cuenta.</p>
-
-<button class="dash-btn">Administrar</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>Descargas</h3>
-
-<p>Revisa los temas descargados.</p>
-
-<button class="dash-btn">Ver descargas</button>
-
-</div>
-
-
-</div>
-
-</section>
-
+<script src="script.js"></script>
 </body>
-
 </html>

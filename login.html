@@ -1,43 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-<title>Login - USERVIX</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <title>Login - UserVix</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="auth-body">
+<body class="auth-page">
 
 <div class="auth-container">
+    <div class="auth-box">
+        <h2>Bienvenido</h2>
+        <p>Inicia sesión en UserVix</p>
 
-<h1 class="logo">USERVIX</h1>
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
 
-<h2>Iniciar sesión</h2>
+        <div class="login-options">
+            <label>
+                <input type="checkbox" id="remember"> Recordarme
+            </label>
 
-<form class="form" method="POST" action="login.php">
+            <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
+        </div>
 
-<div class="input-group">
-<input type="email" placeholder="Correo electrónico" required>
+        <button class="btn-primary" onclick="login()">Iniciar sesión</button>
+
+        <p class="link-text">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+    </div>
 </div>
 
-<div class="input-group">
-<input type="password" placeholder="Contraseña" required>
-</div>
-
-<button class="auth-btn">Entrar</button>
-
-<p class="link">
-¿No tienes cuenta?
-<a href="registro.html">Crear cuenta</a>
-</p>
-
-</form>
-
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>

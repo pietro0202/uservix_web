@@ -1,47 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-<title>Registro - USERVIX</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <title>Registro - UserVix</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="auth-body">
+<body class="auth-page">
 
 <div class="auth-container">
+    <div class="auth-box">
+        <h2>Crear Cuenta</h2>
+        <p>Únete a UserVix</p>
 
-<h1 class="logo">USERVIX</h1>
+        <input type="text" id="nombre" placeholder="Nombre completo">
+        <input type="text" id="nombre de usuario" placeholder="Nombre de Usuario">
+        <input type="email" id="emailReg" placeholder="Correo electrónico">
+        <input type="password" id="passReg" placeholder="Contraseña">
+        <input type="password" id="passReg" placeholder="Confirmar Contraseña">
 
-<h2>Crear cuenta</h2>
+        <button class="btn-primary" onclick="registrar()">Registrarse</button>
 
-<form class="form">
-
-<div class="input-group">
-<input type="text" placeholder="Nombre completo" required>
+        <p class="link-text">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
 </div>
 
-<div class="input-group">
-<input type="email" placeholder="Correo electrónico" required>
-</div>
-
-<div class="input-group">
-<input type="password" placeholder="Contraseña" required>
-</div>
-
-<button class="auth-btn">Registrarse</button>
-
-<p class="link">
-¿Ya tienes cuenta?
-<a href="login.html">Inicia sesión</a>
-</p>
-
-</form>
-
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
