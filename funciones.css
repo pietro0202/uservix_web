@@ -85,7 +85,7 @@ nav a {
     background: white;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
 
@@ -95,7 +95,7 @@ nav a {
 
 /* CAJAS (FUNCIONES) */
 .dark-mode .func-card {
-    background: #2f2f2f;
+    background: #434242;
     color: white;
 }
 

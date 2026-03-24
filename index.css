@@ -17,7 +17,7 @@ body:not(.auth-page) {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: linear-gradient(90deg, #141e30, #243b55);
+    background: linear-gradient(90deg, #141e30, #141e30);
     color: white;
 
     position: fixed;
@@ -89,7 +89,7 @@ nav a {
     align-items: center;
     justify-content: space-between;
     padding: 1px 20px;
-    background: linear-gradient(120deg, #141e30, #243b55);
+    background: linear-gradient(120deg, #1a263d, #1a263d);
     color: white;
 }
 
@@ -174,7 +174,7 @@ footer {
 
 /* HEADER */
 .dark-mode .header {
-    background: #2a2a2a;
+    background: #222222;
 }
 
 /* HERO */
@@ -216,10 +216,15 @@ footer {
 }
 
 .hero-logo img {
+    background: #1f354d;
     width: 420px;
     margin-left: -500px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    
+}
+.dark-mode .hero-logo img {
+background: #333333;
     
 }
 a {
