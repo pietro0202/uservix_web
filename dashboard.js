@@ -26,32 +26,51 @@ window.onload = function(){
         if(btn) btn.textContent = "🌙";
     }
 }
+
+function logout() {
+    window.location.href = "index.html";
+}
+
+// ==========================
+// ♿ ACCESIBILIDAD
+// ==========================
+function toggleAccesibilidad() {
+    document.body.classList.toggle("accesibilidad");
+}
+
+// ==========================
+// 💬 CHAT
+// ==========================
+const chatBody = document.querySelector(".chat-body") || document.getElementById("chatBody");
+const chatInput = document.querySelector(".chat-input-area input") || document.getElementById("chatInput");
+const chatButton = document.querySelector(".chat-input-area button") || document.getElementById("chatSendBtn");
+
+if(chatButton && chatInput && chatBody){
+    chatButton.addEventListener("click", enviarMensaje);
+    chatInput.addEventListener("keypress", function(e){
+        if(e.key === "Enter") enviarMensaje();
+    });
+}
+
 function enviarMensaje() {
     const texto = chatInput.value.trim();
     if(texto === "") return;
 
-    // --- MENSAJE DEL USUARIO ---
+    // Mensaje del usuario
     const userDiv = document.createElement("div");
-    // Usamos 'msg user' para heredar los estilos base y el color azul
-    userDiv.className = "msg user"; 
-    userDiv.textContent = texto; 
+    userDiv.className = "user-msg"; 
+    userDiv.textContent = texto; // Usamos textContent por seguridad y limpieza
     chatBody.appendChild(userDiv);
 
     chatInput.value = "";
     chatBody.scrollTop = chatBody.scrollHeight;
 
-    // --- SIMULACIÓN DE RESPUESTA BOT ---
+    // Simulación de respuesta bot
     setTimeout(() => {
         const botDiv = document.createElement("div");
-        // Usamos 'msg bot' para que sea idéntico al mensaje de bienvenida
-        botDiv.className = "msg bot"; 
-        botDiv.textContent = "¡Mensaje recibido! Nuestro equipo de arquitectos UserVix revisará tu diseño pronto.";
+        botDiv.className = "bot-msg"; 
+        botDiv.textContent = "¡Mensaje recibido! Nuestro equipo revisará tu solicitud.";
         chatBody.appendChild(botDiv);
-        
-        // Auto-scroll al final
-        chatBody.scrollTo({
-            top: chatBody.scrollHeight,
-            behavior: 'smooth'
-        });
+        chatBody.scrollTop = chatBody.scrollHeight;
     }, 1000);
 }

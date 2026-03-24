@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Explorar Sistemas - UserVix</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explorar-temas.css">
 </head>
 <body>
 
 <header class="header">
     <div class="logo">UserVix | Galería</div>
     <nav>
+        <button onclick="toggleDarkMode()" id="darkBtn" class="btn-outline">🌙</button>
         <a href="dashboard.html">Volver al Panel</a>
     </nav>
 </header>
@@ -51,6 +52,9 @@
     .gallery-item img:hover { transform: translateY(-10px); }
 </style>
 
-<script src="script.js"></script>
+<footer>
+    <p></p>
+</footer>
+<script src="explorar-temas.js"></script>
 </body>
 </html>
