@@ -10,7 +10,6 @@ body:not(.auth-page) {
     
 }
 
-
 /* HEADER */
 .header {
     display: flex;
@@ -229,6 +228,70 @@ background: #333333;
 }
 a {
     text-decoration: none;
+}
+
+/* 📱 MÓVIL */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* DASHBOARD */
+    .vix-container {
+        grid-template-columns: 1fr; /* una sola columna */
+        gap: 20px;
+    }
+
+    /* SIDEBAR */
+    .vix-sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* CARDS */
+    .vix-card-hero {
+        padding: 25px;
+        text-align: center;
+    }
+
+    /* GRID TEMAS */
+    .vix-grid {
+        grid-template-columns: 1fr; /* 1 por fila */
+    }
+
+    /* CHAT */
+    .vix-chat-card {
+        height: auto;
+    }
+
+    .chat-input-area {
+        flex-direction: column;
+    }
+
+    .chat-input-area input {
+        width: 100%;
+    }
+
+    /* CHAT PAGE (solicitar diseño) */
+    .vix-chat-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .vix-chat-sidebar {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 
