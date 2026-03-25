@@ -230,68 +230,70 @@ a {
     text-decoration: none;
 }
 
-/* 📱 MÓVIL */
+
+/* 📱 RESPONSIVE PARA CELULAR */
 @media (max-width: 768px) {
 
     /* HEADER */
     .header {
-        padding: 10px 20px;
         flex-direction: column;
-        gap: 10px;
-    }
-
-    .header nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* DASHBOARD */
-    .vix-container {
-        grid-template-columns: 1fr; /* una sola columna */
-        gap: 20px;
-    }
-
-    /* SIDEBAR */
-    .vix-sidebar {
-        width: 100%;
-        padding: 20px;
-    }
-
-    /* CARDS */
-    .vix-card-hero {
-        padding: 25px;
+        padding: 15px 20px;
         text-align: center;
     }
 
-    /* GRID TEMAS */
-    .vix-grid {
-        grid-template-columns: 1fr; /* 1 por fila */
+    nav {
+        margin-top: 10px;
     }
 
-    /* CHAT */
-    .vix-chat-card {
-        height: auto;
+    nav a {
+        display: block;
+        margin: 10px 0;
     }
 
-    .chat-input-area {
+    .auth {
+        margin-top: 10px;
+    }
+
+    /* HERO */
+    .hero {
         flex-direction: column;
-    }
-
-    .chat-input-area input {
-        width: 100%;
-    }
-
-    /* CHAT PAGE (solicitar diseño) */
-    .vix-chat-wrapper {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .vix-chat-sidebar {
-        width: 100%;
         text-align: center;
+        padding: 40px 20px;
     }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-logo img {
+        width: 220px;
+        margin: 20px 0;
+    }
+
+    .hero-img img {
+        width: 200px;
+        margin: 20px 0;
+    }
+
+    /* FEATURES */
+    .features {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* ABOUT & CTA */
+    .about, .cta {
+        padding: 30px 20px;
+    }
+    .hero-img img,
+    .hero-logo img {
+    margin-left: 0;
+}
 }
 
 
