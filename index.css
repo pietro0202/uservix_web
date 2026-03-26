@@ -6,7 +6,7 @@ body {
 
 /* 🔥 SOLO PARA PÁGINAS NORMALES */
 body:not(.auth-page) {
-    padding-top: 80px;
+    padding-top: 68px;
     
 }
 
@@ -86,12 +86,10 @@ nav a {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* 🔥 CLAVE */
-    padding: 40px 20px;
-    background: #1a263d;
+    justify-content: space-between;
+    padding: 1px 20px;
+    background: linear-gradient(120deg, #1a263d, #1a263d);
     color: white;
-    text-align: center;
 }
 
 .hero-text {
@@ -239,58 +237,62 @@ a {
     /* HEADER */
     .header {
         flex-direction: column;
-        padding: 15px;
+        padding: 15px 20px;
+        text-align: center;
     }
 
     nav {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        margin-top: 10px;
     }
 
     nav a {
-        margin: 8px 0;
+        display: block;
+        margin: 10px 0;
     }
 
     .auth {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .auth a {
-        margin: 5px 0;
+        margin-top: 10px;
     }
 
     /* HERO */
     .hero {
         flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
     }
 
     .hero-text h1 {
-        font-size: 26px;
+        font-size: 28px;
+    }
+
+    .hero-logo img {
+        width: 220px;
+        margin: 20px 0;
+    }
+
+    .hero-img img {
+        width: 200px;
+        margin: 20px 0;
     }
 
     /* FEATURES */
     .features {
         flex-direction: column;
-        padding: 20px;
+        align-items: center;
+        padding: 30px 20px;
     }
 
     .card {
-        width: 100%;
+        width: 90%;
     }
-
 
     /* ABOUT & CTA */
     .about, .cta {
         padding: 30px 20px;
     }
     .hero-img img,
-.hero-logo img {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
+    .hero-logo img {
+    margin-left: 0;
 }
 }
 
