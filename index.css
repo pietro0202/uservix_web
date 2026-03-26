@@ -230,6 +230,110 @@ a {
     text-decoration: none;
 }
 
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste del Body para que el texto no se tape */
+    body:not(.auth-page) {
+        padding-top: 75px; /* Ajustado al nuevo tamaño del header */
+    }
+
+    /* 2. Header: Ahora es una sola fila o máximo dos muy delgadas */
+    .header {
+        padding: 10px 15px;
+        flex-direction: row; /* Forzamos que sea horizontal */
+        flex-wrap: wrap;     /* Permite bajar si el celular es MUY pequeño */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 3. El Logo se hace más pequeño para dar espacio */
+    .logo {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    /* 4. Escondemos o achicamos el Nav para que no estorbe al centro */
+    nav {
+        order: 3; /* Mandamos los links (Inicio, Funciones...) abajo si no caben */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 0 5px;
+    }
+
+    /* 5. EL TRUCO: Agrupamos el botón de modo oscuro con los de Auth */
+    .auth {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Espacio pequeño entre ellos */
+        order: 2; /* Se queda arriba a la derecha */
+    }
+
+    /* Botones de Auth más compactos */
+    .auth .btn-primary, 
+    .auth .btn-outline {
+        padding: 5px 10px;
+        font-size: 12px;
+        margin: 0;
+        white-space: nowrap; /* Evita que el texto del botón se rompa en dos líneas */
+    }
+
+    /* El botón de la luna 🌙 más pequeño */
+    #darkBtn {
+        padding: 5px 10px !important;
+        font-size: 14px;
+        min-width: 40px;
+    }
+
+    /* 6. Ajuste del Hero para que el título se vea claro */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 26px; /* Tamaño ideal para móvil */
+        margin-top: 0;
+    }
+
+    /* 7. Limpieza de márgenes negativos en imágenes */
+    .hero-img img {
+        margin-left: 0 !important;
+        width: 90%;
+        max-width: 250px;
+        margin-top: 20px;
+    }
+    .hero-logo img {
+        margin-left: 0 !important;
+        width: 90%;
+        max-width: 320px;
+        margin-top: 20px;
+    }
+
+    /* Ajuste de Features (Cards) */
+    .features {
+        flex-direction: column; /* Cartas una debajo de otra */
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .card {
+        width: 90%; /* Ocupa casi todo el ancho */
+    }
+
+    /* Ajuste de Secciones de texto */
+    .about, .cta {
+        padding: 30px 20px;
+    }
+}
 
 
 
