@@ -133,3 +133,65 @@ body {
 .btn-primary:hover {
     transform: scale(1.05);
 }
+
+
+/* --- RESPONSIVE LOGIN USERVIX --- */
+
+@media (max-width: 768px) {
+    .auth-page {
+        padding: 20px;
+        height: auto; /* Permite scroll si el teclado del móvil se abre */
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .auth-container {
+        width: 100%;
+    }
+
+    .auth-box {
+        width: 100%;       /* Ocupa el ancho disponible */
+        max-width: 350px;  /* Pero no se estira de más */
+        padding: 40px 25px; /* Reducimos el padding exagerado de 70px para móvil */
+        box-sizing: border-box;
+    }
+
+    .auth-box h2 {
+        font-size: 24px;
+    }
+
+   .auth-box input {
+    width: 100%;           /* Cambia 90% por 100% */
+    padding: 15px;
+    margin: 10px 0;        /* 10px arriba/abajo, 0 a los lados */
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* 🔥 ESTA ES LA CLAVE */
+}
+
+    /* Ajuste de opciones (Recordarme y Olvidé contraseña) */
+    .login-options {
+        flex-direction: column; /* Se apilan para que no se amontonen */
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .auth-box button {
+        width: 80%; /* Botón más grande y fácil de presionar en móvil */
+        padding: 12px;
+    }
+
+    .link-text {
+        font-size: 13px;
+    }
+}
+
+/* Optimización para pantallas muy delgadas */
+@media (max-width: 350px) {
+    .auth-box {
+        padding: 30px 15px;
+    }
+}
