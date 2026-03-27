@@ -133,3 +133,46 @@ body {
 .btn-primary:hover {
     transform: scale(1.05);
 }
+
+/* --- RESPONSIVE REGISTRO USERVIX --- */
+
+@media (max-width: 768px) {
+    .auth-page {
+        padding: 20px;
+        height: auto; 
+        min-height: 100vh;
+        align-items: flex-start; /* En móviles largos, mejor que empiece arriba */
+        padding-top: 50px;
+    }
+
+    .auth-box {
+        width: 82%;
+        max-width: 380px; /* Un poco más ancho para dar aire a los campos */
+        padding: 30px 20px;
+    }
+
+    .auth-box h2 {
+        font-size: 22px;
+    }
+
+    .auth-box input {
+        font-size: 16px; /* Evita zoom molesto en teclados de iPhone */
+        padding: 14px;  /* Campos más grandes para facilitar el toque con el dedo */
+    }
+
+    .auth-box button {
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 350px) {
+    .auth-box {
+        padding: 20px 15px;
+    }
+    
+    .auth-box h2 {
+        font-size: 18px;
+    }
+}

@@ -284,6 +284,207 @@ nav a {
     color: #e0e0e0;
 }
 
+/* --- RESPONSIVE DASHBOARD USERVIX --- */
+
+@media (max-width: 768px) {
+    
+    /* 1. Aumentamos el tamaño base de la fuente significativamente */
+    body.accesibilidad {
+        font-size: 150% !important; /* Letras más grandes para máxima visibilidad */
+    }
+
+    /* 2. Seleccionamos TODO el contenido EXCEPTO el header */
+    body.accesibilidad :not(.header):not(.header *) {
+        /* Aplicamos el crecimiento solo a lo que no sea el header o hijos del header */
+        line-height: 1.4;           
+        white-space: normal;       
+        word-wrap: break-word;     
+    }
+
+    /* Aplicamos el tamaño extra a títulos, párrafos y botones del contenido */
+    body.accesibilidad .vix-container h1, 
+    body.accesibilidad .vix-container h2, 
+    body.accesibilidad .vix-container h3, 
+    body.accesibilidad .vix-container p, 
+    body.accesibilidad .vix-container a, 
+    body.accesibilidad .vix-container button,
+    body.accesibilidad .vix-container span,
+    body.accesibilidad .vix-sidebar *,
+    body.accesibilidad .vix-notice * {
+        font-size: 110% !important; /* Crece un poco más del doble base */
+        display: block;            /* Para que se estiren hacia abajo ordenadamente */
+        margin-bottom: 10px;
+    }
+
+    /* 3. Las Cards crecen hacia abajo (Verticalmente) */
+    body.accesibilidad .vix-sidebar,
+    body.accesibilidad .vix-card-hero,
+    body.accesibilidad .vix-theme-card,
+    body.accesibilidad .vix-chat-card,
+    body.accesibilidad .vix-notice {
+        width: 100% !important;   
+        max-width: 100% !important;
+        height: auto !important;   /* Se estiran hacia abajo */
+        min-height: min-content;   
+        padding: 30px 15px !important;
+        box-sizing: border-box;    
+    }
+
+    /* 4. EL HEADER SE MANTIENE ORIGINAL */
+    /* Forzamos que los textos del header no hereden el 250% del body */
+    body.accesibilidad .header,
+    body.accesibilidad .header a,
+    body.accesibilidad .header .logo,
+    body.accesibilidad .header button {
+        font-size: 14px !important; /* Tamaño estándar de móvil */
+        height: auto !important;
+    }
+    
+    body.accesibilidad .logo {
+        font-size: 20px !important; /* El logo un poquito más grande pero controlado */
+    }
+
+    /* 5. Efecto del Botón de Accesibilidad al Cliquearlo */
+    /* Nota: Asegúrate de que el ID coincida con el de tu botón */
+    #darkBtn:active, #accesibilidadBtn:active {
+        background-color: white !important;
+        color: #141e30 !important;
+    }
+    /* 1. Ajuste del Body para el Header fijo */
+    body:not(.auth-page) {
+        padding-top: 85px; 
+    }
+    
+    /* 2. Header Compacto (Igual al Index) */
+    .header {
+        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Navegación del Header: Priorizamos botones a la derecha */
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Ocultamos links de texto menos críticos en móvil para ahorrar espacio 
+       o los hacemos muy pequeños */
+    nav a {
+        display: inline-block !important; 
+        font-size: 11px; /* Letra pequeña para que quepa todo */
+        margin: 0 4px;
+        white-space: nowrap; /* Evita que las palabras se rompan */
+    }
+
+    .header .btn-primary {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+    #darkBtn {
+        padding: 5px 10px !important;
+        font-size: 14px;
+        min-width: 40px;
+    }
+
+    /* 3. Layout Principal: De 2 columnas a 1 columna */
+    .vix-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+        margin: 20px auto;
+        gap: 20px;
+    }
+
+    /* 4. Sidebar (Perfil y Menú) ahora arriba */
+    .vix-sidebar {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .avatar-glow {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .vix-menu {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .vix-menu a {
+        margin-bottom: 0;
+        font-size: 13px;
+        flex: 1;
+    }
+
+    /* 5. Panel Principal y Hero */
+    .vix-card-hero {
+        padding: 25px;
+        text-align: center;
+    }
+
+    .vix-card-hero h1 {
+        font-size: 22px;
+    }
+
+    .vix-card-hero p {
+        font-size: 14px;
+    }
+
+    /* 6. Chat Adaptado */
+    .vix-chat-card {
+        height: 400px; /* Un poco más alto en móvil para leer mejor */
+    }
+
+    .chat-input-area {
+        padding: 10px;
+    }
+
+    .chat-input-area input {
+        font-size: 13px;
+    }
+
+    /* 7. Grid de Temas (Cards) */
+    .vix-grid {
+        grid-template-columns: 1fr; /* Un tema por fila */
+        gap: 15px;
+    }
+
+    .vix-theme-card {
+        max-width: 320px;
+        margin: 0 auto; /* Centrar las cards */
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* 8. Aviso de Notificación */
+    .vix-notice {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* Ajuste para pantallas extra pequeñas */
+@media (max-width: 400px) {
+    .vix-menu {
+        flex-direction: column;
+    }
+    
+    .header .btn-primary {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}
 
 
 

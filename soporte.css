@@ -161,3 +161,105 @@ footer {
 .dark-mode footer {
     background: #2a2a2a;
 }
+
+/* --- RESPONSIVE SOPORTE--- */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste del Body para el Header alto */
+    body:not(.auth-page) {
+        padding-top: 110px; 
+    }
+
+    /* 2. Header: Logo al centro y Nav debajo */
+    .header {
+        padding: 10px 15px;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    /* 3. Logo centrado */
+    .logo {
+        width: 100%;
+        font-size: 22px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    /* 4. Navegación: Todo visible y centrado */
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+        gap: 8px;
+    }
+
+    nav a {
+        display: inline-block !important; /* IMPORTANTE: No ocultar nada */
+        font-size: 12px;
+        margin: 0 5px;
+        white-space: nowrap;
+    }
+
+    #darkBtn {
+        padding: 4px 10px !important;
+        font-size: 14px;
+        min-width: 40px;
+    }
+
+    /* 5. Ajuste de Secciones de Soporte */
+    .support {
+        padding: 10px 20px;
+    }
+
+    .support h1 {
+        font-size: 24px;
+    }
+
+    /* 6. FAQ: En móvil usamos más ancho (90%) */
+    .faq {
+        padding: 20px;
+    }
+
+    .faq-item {
+        width: 90%; /* Casi todo el ancho en móvil */
+        padding: 15px;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* 7. Formulario de Contacto: Ajuste de ancho */
+    .contact {
+        padding: 30px 20px;
+    }
+
+    .contact input, 
+    .contact textarea {
+        width: 100%; /* El formulario ocupa todo el ancho del contenedor */
+        max-width: 400px; /* Pero no se estira demasiado en tablets */
+        margin: 10px auto;
+    }
+
+    .contact h2 {
+        font-size: 20px;
+    }
+}
+
+/* Optimización para pantallas muy pequeñas (iPhone SE, etc) */
+@media (max-width: 380px) {
+    nav a {
+        font-size: 11px;
+        margin: 0 3px;
+    }
+    
+    .header {
+        padding-bottom: 15px;
+    }
+}

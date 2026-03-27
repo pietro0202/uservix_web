@@ -151,7 +151,7 @@ body {
     }
 
     .auth-box {
-        width: 100%;       /* Ocupa el ancho disponible */
+        width: 90%;       /* Ocupa el ancho disponible */
         max-width: 350px;  /* Pero no se estira de más */
         padding: 40px 25px; /* Reducimos el padding exagerado de 70px para móvil */
         box-sizing: border-box;

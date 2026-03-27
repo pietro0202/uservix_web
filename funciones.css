@@ -115,3 +115,78 @@ footer {
 .dark-mode footer {
     background: #2a2a2a;
 }
+
+/* --- RESPONSIVE FUNCIONES USERVIX --- */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste del Body: Un poco más de espacio por si el header crece a dos filas */
+    body:not(.auth-page) {
+        padding-top: 100px; 
+    }
+
+    /* 2. Header: Logo arriba o izquierda, Nav fluye naturalmente */
+    /* 1. Centramos el contenido del Header */
+    .header {
+        padding: 10px 15px;
+        flex-direction: column; /* Apila el logo arriba y el nav abajo */
+        align-items: center;    /* Centra horizontalmente */
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* 2. Hacemos que el logo ocupe todo el ancho para que se centre */
+    .logo {
+        width: 100%; 
+        font-size: 22px;
+        margin-bottom: 10px; /* Espacio antes de los botones/links */
+        text-align: center;   /* Asegura que el texto esté al medio */
+    }
+
+    /* 3. El Nav también se centra debajo del logo */
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centra los links y la luna */
+        flex-wrap: wrap;        /* Si son muchos, bajan ordenadamente */
+        gap: 10px;
+    }
+
+    nav a {
+        display: inline-block !important; 
+        font-size: 12px;     /* Tamaño legible pero compacto */
+        margin: 0 4px;
+        white-space: nowrap; /* Evita que las palabras se corten */
+    }
+
+    /* 4. Botón de Modo Oscuro ajustado */
+    #darkBtn {
+        padding: 5px 10px !important;
+        font-size: 14px;
+        min-width: 40px;
+        order: -1; /* Opcional: lo pone al inicio del nav */
+    }
+
+    /* 5. Grid de Funciones: Una sola columna */
+    .funciones-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .func-card {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .funciones-header h1 {
+        font-size: 24px;
+    }
+}
+
+/* Ajuste para pantallas extremadamente pequeñas */
+@media (max-width: 380px) {
+    nav a {
+        font-size: 11px; /* Un punto menos para asegurar que todo quepa */
+        margin: 0 2px;
+    }
+}

@@ -152,7 +152,100 @@ footer {
     color: white;
 }
 
+/* --- RESPONSIVE DESCARGAS --- */
 
+@media (max-width: 768px) {
+    /* 1. Ajuste del Body para que el Header (ahora más alto) no tape el título */
+    body:not(.auth-page) {
+        padding-top: 110px; 
+    }
+
+    /* 2. Header: Todo centrado y apilado verticalmente */
+    .header {
+        padding: 10px 15px;
+        flex-direction: column; /* Apila Logo arriba y Nav abajo */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    /* 3. Logo en el centro */
+    .logo {
+        width: 100%;
+        font-size: 22px;
+        margin-bottom: 8px; /* Espacio antes de los botones */
+        text-align: center;
+    }
+
+    /* 4. Navegación: Nada oculto, todo visible */
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centra los links y botones */
+        align-items: center;
+        flex-wrap: wrap;        /* Si no caben en una línea, bajan a la siguiente */
+        gap: 8px;
+    }
+
+    nav a {
+        display: inline-block !important; /* Garantiza visibilidad */
+        font-size: 12px;
+        margin: 0 5px;
+        white-space: nowrap;
+    }
+
+    /* Ajuste de botones en el header móvil */
+    #darkBtn {
+        padding: 4px 10px !important;
+        font-size: 14px;
+        min-width: 40px;
+    }
+
+    /* 5. Contenido de Descargas: Cards una debajo de otra */
+    .download-main {
+        flex-direction: column; /* De horizontal a vertical */
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .download-card {
+        width: 90%; /* Ocupa casi todo el ancho disponible */
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    /* 6. Sección de Instrucciones */
+    .install {
+        padding: 30px 20px;
+    }
+
+    .install h2 {
+        font-size: 20px;
+    }
+
+    .install ol {
+        font-size: 14px;
+        padding-left: 20px; /* Asegura que se vean los números de la lista */
+    }
+
+    .download-header h1 {
+        font-size: 24px;
+    }
+}
+
+/* Ajuste fino para celulares muy pequeños */
+@media (max-width: 380px) {
+    nav a {
+        font-size: 11px;
+        margin: 0 3px;
+    }
+    
+    .header {
+        padding-bottom: 15px;
+    }
+}
 
 
 
