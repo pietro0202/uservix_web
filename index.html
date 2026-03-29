@@ -78,5 +78,19 @@
     <p></p>
 </footer>
 <script src="index.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (navigator.userAgent.includes("UserVixApp")) {
+
+        let link = document.querySelector(".link-descargas");
+        if (link) link.style.display = "none";
+
+        let btn = document.querySelector(".btn-descargar");
+        if (btn) btn.style.display = "none";
+    }
+
+});
+</script>
 </body>
 </html>
