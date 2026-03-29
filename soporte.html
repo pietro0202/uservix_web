@@ -15,7 +15,7 @@
         <button onclick="toggleDarkMode()" id="darkBtn" class="btn-outline">🌙</button>
         <a href="index.html">Inicio</a>
         <a href="funciones.html">Funciones</a>
-        <a href="descargas.html">Descargas</a>
+        <a href="descargas.html" class="link-descargas">Descargas</a>
         <a href="soporte.html">Soporte</a>
     </nav>
 </header>
@@ -58,5 +58,17 @@
     <p></p>
 </footer>
 <script src="soporte.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (navigator.userAgent.includes("UserVixApp")) {
+
+        let link = document.querySelector(".link-descargas");
+        if (link) link.style.display = "none";
+
+    }
+
+});
+</script>
 </body>
 </html>
