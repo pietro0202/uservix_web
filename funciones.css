@@ -190,3 +190,6 @@ footer {
         margin: 0 2px;
     }
 }
+.app-mode .link-descargas {
+    display: none !important;
+}
