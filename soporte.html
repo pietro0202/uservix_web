@@ -15,7 +15,7 @@
         <button onclick="toggleDarkMode()" id="darkBtn" class="btn-outline">🌙</button>
         <a href="index.html">Inicio</a>
         <a href="funciones.html">Funciones</a>
-        <a href="descargas.html" class="link-descargas">Descargas</a>
+        <a href="descargas.html" class="links-descargas">Descargas</a>
         <a href="soporte.html">Soporte</a>
     </nav>
 </header>
@@ -61,9 +61,11 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (window.Android) { // 🔥 DETECCIÓN REAL DE LA APP
-        let link = document.querySelector(".link-descargas");
+    if (navigator.userAgent.includes("UserVixApp")) {
+
+        let link = document.querySelector(".links-descargas");
         if (link) link.style.display = "none";
+
     }
 
 });
