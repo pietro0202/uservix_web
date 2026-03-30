@@ -66,11 +66,9 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (navigator.userAgent.includes("UserVixApp")) {
-
-        let links = document.querySelectorAll(".link-descargas");
-links.forEach(el => el.style.display = "none");
-
+    if (window.Android) { // 🔥 DETECCIÓN REAL DE LA APP
+        let link = document.querySelector(".link-descargas");
+        if (link) link.style.display = "none";
     }
 
 });
