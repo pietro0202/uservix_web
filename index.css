@@ -334,7 +334,12 @@ a {
         padding: 30px 20px;
     }
 }
-
+body.modo-app .link-descargas {
+    display: none !important;
+}
+body.modo-app .btn-descargar {
+    display: none !important;
+}
 
 
 

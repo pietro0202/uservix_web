@@ -26,3 +26,6 @@ window.onload = function(){
         if(btn) btn.textContent = "🌙";
     }
 }
+if (navigator.userAgent.includes("UserVixApp")) {
+    document.body.classList.add("modo-app");
+}
