@@ -263,6 +263,6 @@ footer {
         padding-bottom: 15px;
     }
 }
-.app-mode .link-descargas {
+body.modo-app .link-descargas {
     display: none !important;
 }

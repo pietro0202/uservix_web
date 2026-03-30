@@ -59,20 +59,25 @@
 </footer>
 <script src="soporte.js"></script>
 <script>
-window.onload = function () {
-
+window.addEventListener('DOMContentLoaded', function () {
+    // 1. Detectamos por UserAgent (Configurado en tu MainActivity.java)
+    const esApp = navigator.userAgent.includes("UserVixApp");
+    
+    // 2. Detectamos por parámetro (por si acaso)
     const params = new URLSearchParams(window.location.search);
-
     if (params.get("app") === "true") {
         localStorage.setItem("modoApp", "true");
     }
 
-    if (localStorage.getItem("modoApp") === "true") {
-        let link = document.querySelector(".link-descargas");
-        if (link) link.style.display = "none";
+    // 3. Si es la App, ocultamos el enlace
+    if (esApp || localStorage.getItem("modoApp") === "true") {
+        // Buscamos el enlace por su clase o por su texto
+        const linkDescargas = document.querySelector(".link-descargas");
+        if (linkDescargas) {
+            linkDescargas.style.display = "none";
+        }
     }
-
-}
+});
 </script>
 <script>
 console.log("UserAgent:", navigator.userAgent);
