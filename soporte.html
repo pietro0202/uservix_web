@@ -63,13 +63,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (navigator.userAgent.includes("UserVixApp")) {
 
-        let link = document.querySelector(".link-descargas");
-        if (link) link.style.display = "none";
+        let links = document.querySelectorAll(".link-descargas");
+links.forEach(el => el.style.display = "none");
 
     }
 
 });
 </script>
-
+<script>
+console.log("UserAgent:", navigator.userAgent);
+</script>
 </body>
 </html>
