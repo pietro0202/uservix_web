@@ -59,16 +59,24 @@
 </footer>
 <script src="soporte.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
 
-    if (navigator.userAgent.includes("UserVixApp")) {
+    let esApp = false;
 
-        let link = document.querySelector(".links-descargas");
-        if (link) link.style.display = "none";
-
+    if (window.Android) {
+        esApp = true;
     }
 
-});
+    if (navigator.userAgent.includes("UserVixApp")) {
+        esApp = true;
+    }
+
+    if (esApp) {
+        let link = document.querySelector(".link-descargas");
+        if (link) link.style.display = "none";
+    }
+
+}
 </script>
 <script>
 console.log("UserAgent:", navigator.userAgent);
