@@ -61,17 +61,13 @@
 <script>
 window.onload = function () {
 
-    let esApp = false;
+    const params = new URLSearchParams(window.location.search);
 
-    if (window.Android) {
-        esApp = true;
+    if (params.get("app") === "true") {
+        localStorage.setItem("modoApp", "true");
     }
 
-    if (navigator.userAgent.includes("UserVixApp")) {
-        esApp = true;
-    }
-
-    if (esApp) {
+    if (localStorage.getItem("modoApp") === "true") {
         let link = document.querySelector(".link-descargas");
         if (link) link.style.display = "none";
     }
